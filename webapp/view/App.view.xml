@@ -4,7 +4,7 @@
 			<pages>
 				<Page id="page" title="{i18n>title}">
 					<content>
-						<Image src="https://raw.githubusercontent.com/SAP/openSAP-ui5-course/master/import/MoviesHeader.png" tooltip="Movie illustration" width="100%" ></Image>
+						<Image src="https://raw.githubusercontent.com/SAP/openSAP-ui5-course/master/import/MoviesHeader.png" press="sap.m.MessageToast.show('Do you like to go to the movies?')" tooltip="Movie illustration" width="100%" ></Image>
 						<f:SimpleForm id="form" editable="true" layout="ColumnLayout" title="Find Movies" columnsM="2" columnsL="3" columnsXL="3">
 							<f:content>
 								<Label text="City" labelFor="city" />
@@ -17,7 +17,7 @@
 									<core:ListItem icon="sap-icon://paper-plane" key="Sciencefiction" text="Science Fiction" />
 								</Select>
 								<Label />
-								<Button text="Find Movie" type="Emphasized" press="onPress" class="sapUISmallMarginTop" />
+								<Button text="Find Movie" type="Emphasized" press="onPress('Searching for movies')" class="sapUISmallMarginTop" />
 							</f:content>
 						</f:SimpleForm>
 					</content>
