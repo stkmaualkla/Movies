@@ -1,0 +1,35 @@
+<mvc:View controllerName="opensap.movies.controller.App" xmlns:mvc="sap.ui.core.mvc" displayBlock="true" xmlns="sap.m" xmlns:f="sap.ui.layout.form" xmlns:core="sap.ui.core">
+	<Shell id="shell">
+		<App id="app">
+			<pages>
+				<Page id="page" title="{i18n>title}">
+					<content>
+						<Image src="https://raw.githubusercontent.com/SAP/openSAP-ui5-course/master/import/MoviesHeader.png" tooltip="Movie illustration" width="100%" ></Image>
+						<f:SimpleForm id="form" editable="true" layout="ColumnLayout" title="Find Movies" columnsM="2" columnsL="3" columnsXL="3">
+							<f:content>
+								<Label text="City" labelFor="city" />
+								<SearchField id="city" showSearchButton="false" width="100%" placeholder="Enter City" />
+								<Label text="Genre" labelFor="genre" />
+								<Select id="genre" width="100%" >
+									<core:ListItem icon="sap-icon://video" key="" text="All" />
+									<core:ListItem icon="sap-icon://physical-activity" key="Action" text="Action" />
+									<core:ListItem icon="sap-icon://electrocardiogram" key="Horror" text="Horror" />
+									<core:ListItem icon="sap-icon://paper-plane" key="Sciencefiction" text="Science Fiction" />
+								</Select>
+								<Label />
+								<Button text="Find Movie" type="Emphasized" press="onPress" class="sapUISmallMarginTop" />
+							</f:content>
+						</f:SimpleForm>
+					</content>
+					<footer>
+						<Toolbar>
+							<ToolbarSpacer />
+							<Link emphasized="true" target="_blank" href="https://www.imdb.com/" text="Explore the IMDB Movie Database" />
+							<ToolbarSpacer />
+						</Toolbar>
+					</footer>
+				</Page>
+			</pages>
+		</App>
+	</Shell>
+</mvc:View>
