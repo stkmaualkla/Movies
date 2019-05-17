@@ -75,11 +75,14 @@
 				"viewPath": "opensap.movies.view",
 				"controlAggregation": "pages",
 				"controlId": "app",
-				"clearControlAggregation": false
+				"clearControlAggregation": false,
+				"bypassed": {
+					"target": "notFound"
+				}
 			},
 			"routes": [{
 				"name": "Home",
-				"pattern": "RouteApp",
+				"pattern": "",
 				"target": ["Home"]
 			}, {
 				"name": "Detail",
@@ -87,12 +90,6 @@
 				"titleTarget": "",
 				"greedy": false,
 				"target": ["Detail"]
-			}, {
-				"name": "notFound",
-				"pattern": "404",
-				"titleTarget": "",
-				"greedy": false,
-				"target": ["notFound"]
 			}],
 			"targets": {
 				"Home": {
@@ -100,6 +97,7 @@
 					"transition": "slide",
 					"clearControlAggregation": false,
 					"viewId": "Home",
+					"viewLevel" : 1,
 					"viewName": "App"
 				},
 				"Detail": {
