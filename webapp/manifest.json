@@ -78,27 +78,38 @@
 				"clearControlAggregation": false
 			},
 			"routes": [{
-				"name": "TargetApp",
+				"name": "Home",
 				"pattern": "RouteApp",
-				"target": ["TargetApp"]
+				"target": ["Home"]
 			}, {
 				"name": "Detail",
 				"pattern": "movies/{movieId}/appointments/{appointmentId}",
 				"titleTarget": "",
 				"greedy": false,
 				"target": ["Detail"]
+			}, {
+				"name": "notFound",
+				"pattern": "404",
+				"titleTarget": "",
+				"greedy": false,
+				"target": ["notFound"]
 			}],
 			"targets": {
-				"TargetApp": {
+				"Home": {
 					"viewType": "XML",
 					"transition": "slide",
 					"clearControlAggregation": false,
-					"viewId": "App",
+					"viewId": "Home",
 					"viewName": "App"
 				},
 				"Detail": {
 					"viewType": "XML",
 					"viewName": "Detail"
+				},
+				"notFound": {
+					"viewType": "XML",
+					"viewName": "notFound",
+					"transition": "show"
 				}
 			}
 		}

@@ -15,7 +15,7 @@
 				"technicalDetails":"Laser projector for 2D and 3D shows in digital 4k quality. High-end audio system with 12 channels and special speaker arrangement for a breathtaking sound experience. Screen size: 22 x 27 m.",
 				"info": "Hamburg",
 				"type": "Type06",
-				"pic": "images/CinemaHamburg.png"
+				"pic": "https://raw.githubusercontent.com/SAP/openSAP-ui5-course/master/import/CinemaHamburg.png"
 			},
 			{
 				"startDate": "05/19/2019/18:0:0",
@@ -28,7 +28,7 @@
 				"technicalDetails":"Digital video projection with maximum screen resolution (8k). Sound mix: Tolpy Atoms. Screen size: 30 x 40 m. 3D glasses available at the entrance.",
 				"info": "Berlin",
 				"type": "Type03",
-				"pic": "images/CinemaBerlin.png"
+				"pic": "https://raw.githubusercontent.com/SAP/openSAP-ui5-course/master/import/CinemaBerlin.png"
 			},
 			{
 				"startDate": "05/19/2019/10:0:0",
@@ -41,7 +41,7 @@
 				"technicalDetails":"EyeMax movie theater and equipment.",
 				"info": "Munich",
 				"type": "Type01",
-				"pic": "images/CinemaMunich.png"
+				"pic": "https://raw.githubusercontent.com/SAP/openSAP-ui5-course/master/import/CinemaMunich.png"
 			},
 			{
 				"startDate": "05/20/2019/10:0:0",

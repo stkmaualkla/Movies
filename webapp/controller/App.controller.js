@@ -4,8 +4,9 @@ sap.ui.define([
 	"sap/ui//model/json/JSONModel",
 	"../model/formatter" ,
 	"sap/ui/model/Filter",
-	"sap/ui/model/FilterOperator"
-], function (Controller, Log, JSONModel, formatter, Filter, FilterOperator) {
+	"sap/ui/model/FilterOperator",
+	"sap/ui/core/UIComponent"
+], function (Controller, Log, JSONModel, formatter, Filter, FilterOperator, UIComponent) {
 	"use strict";
 
 	return Controller.extend("opensap.movies.controller.App", {
@@ -48,6 +49,15 @@ sap.ui.define([
 			  oAppointmentsBinding.filter(oFilterCity);
 			});
 		},
+		onAppointmentSelect: function(oAppointment)
+		{
+			var oContext = oAppointment.getBindingContext("movies"), sPath = oContext.getPath();
+			var aParameters = sPath.split("/");
+			UIComponent.getRouterFor(this).navTo("Detail", {
+				movieId: aParameters[2],
+				appointmentId: aParameters[4]
+			});
+		},
 		onExit: function()
 		{
 			Log.info(" Controller will shortly be destroyed --------------");
@@ -55,6 +65,18 @@ sap.ui.define([
 		onHello: function()
 		{
 			sap.m.MessageToast.show('Do you like to go to the movies?');
+		},
+		to404: function()
+		{
+			UIComponent.getRouterFor(this).navTo("notFound");
+		},
+		goHome: function()
+		{
+			/*var x = new UIComponent(this);
+			window.console.log(x);
+			x.navTo("Home");*/
+			UIComponent.getRouterFor(this).getTargets().display("Home");
+			//window.console.log(this.getRouter());
 		}
 	});
 });

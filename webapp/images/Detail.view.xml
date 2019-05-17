@@ -9,7 +9,7 @@
 						<Label text="{i18n>cinemaAddress}" design="Bold" />
 						<Text text="{movies>cinemaAddress}" class="sapUiMediumMarginBottom"/>
 						<Label text="{i18n>special}" design="Bold" />
-						<Text text="{movies>special}" class="sapUiMediumMarginBottom" />
+						<Text text="{movies>special]" class="sapUiMediumMarginBottom" />
 						<Label text="[i18n>seats}" design="Bold"/>
 						<Text text="{movies>seats}" class="sapMediumMarginBottom"/>
 						<Label text="{i18n>technicalDetails}" design="Bold"/>
